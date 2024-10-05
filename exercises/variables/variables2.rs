@@ -6,7 +6,7 @@
 
 fn main() {
     let x = 10;
-    if x == 10 {
+    if x == 10_i32 {
         println!("x is ten!");
     } else {
         println!("x is not ten!");

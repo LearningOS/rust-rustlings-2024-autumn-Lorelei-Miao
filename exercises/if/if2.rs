@@ -6,13 +6,13 @@
 // Execute `rustlings hint if2` or use the `hint` watch subcommand for a hint.
 
 
-pub fn foo_if_fizz(fizzish: &str) -> &str {
+pub fn foo_if_fizz(fizzish: &str) -> String {
     if fizzish == "fizz" {
-        "foo"
+        "foo".to_string()
     } else if fizzish == "fuzz" {
-        "bar"
+        "bar".to_string()
     } else {
-        "baz"
+        "baz".to_string()
     }
 }
 
@@ -23,16 +23,16 @@ mod tests {
 
     #[test]
     fn foo_for_fizz() {
-        assert_eq!(foo_if_fizz("fizz"), "foo")
+        assert_eq!(foo_if_fizz("fizz"), "foo".to_string())
     }
 
     #[test]
     fn bar_for_fuzz() {
-        assert_eq!(foo_if_fizz("fuzz"), "bar")
+        assert_eq!(foo_if_fizz("fuzz"), "bar".to_string())
     }
 
     #[test]
     fn default_to_baz() {
-        assert_eq!(foo_if_fizz("literally anything"), "baz")
+        assert_eq!(foo_if_fizz("literally anything"), "baz".to_string())
     }
 }
